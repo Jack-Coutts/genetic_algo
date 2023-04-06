@@ -4,7 +4,6 @@ import time
 
 # Define the sizes and positions of the squares and circles
 square_size = 700
-big_square_size = 700
 target_square_size = 25
 circle_size = 10
 circle_positions_1 = [(100, 100), (200, 200), (300, 300), (400, 400), (500, 500)]
@@ -38,6 +37,9 @@ def draw_squares_and_circles(circle_positions):
 # Define the main function
 def main():
     st.title("Genetic Algorithms")
+
+
+    # Iterate over the different images (positions of circles)
     image = st.empty()
     for item in range(10):
         if item % 2:
@@ -45,7 +47,7 @@ def main():
         else:
             a = circle_positions_2
         image.image(draw_squares_and_circles(a), use_column_width=True)
-        time.sleep(0.5)
+        time.sleep(0.3)
 
 
 # Call the main function
